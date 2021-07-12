@@ -1,5 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Method 4 Added
 
-* TODO: Describe initial release.
+* Class 4 added for testing purpose
 
-# Method 4 Added
+
