@@ -3,7 +3,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 
 class PercentIndicator {
   circularPercentIndicator(color,text,radius) {
-    return new CircularPercentIndicator(
+     CircularPercentIndicator(
       radius: 60.0,
       lineWidth: 5.0,
       percent: 1.0,
