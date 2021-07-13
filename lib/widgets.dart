@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
 
 class mWidgets {
-  tf(usernameCont,usernameFocus,iconSecondaryColor,appPrimaryColor) {
+  tf(usernameCont,usernameFocus,iconSecondaryColor,appPrimaryColor,labelText) {
     return TextFormField(
       controller: usernameCont,
       focusNode: usernameFocus,
-      // style: primaryTextStyle(),
+      style: primaryTextStyle(),
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.person, color: iconSecondaryColor),
         focusedBorder: OutlineInputBorder(
@@ -14,14 +15,15 @@ class mWidgets {
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: BorderSide(width: 1, color: iconSecondaryColor)),
-        labelText: 'Username*',
-        // labelStyle: primaryTextStyle(),
+        labelText: labelText,
+        labelStyle: primaryTextStyle(),
       ),
       // cursorColor: appStore.isDarkModeOn ? white : blackColor,
       keyboardType: TextInputType.name,
       validator: (s) {
         if (s.trim().isEmpty) return 'Usermame is required';
-        // if (!s.trim().isAlpha()) return 'Username is not valid';
+
+        if (!s.trim().isAlpha()) return 'Username is not valid';
         return null;
       },
     );
