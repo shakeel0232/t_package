@@ -1,7 +1,9 @@
+import 'package:TestPackages/AppColors.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class CustomDelete extends StatelessWidget {
+  Color cardColor = Colors.white;
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -10,7 +12,7 @@ class CustomDelete extends StatelessWidget {
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: new BoxDecoration(
-          // color: appStore.isDarkModeOn ? appStore.cardColor : appBarBackgroundColor,
+          color: Colors.white,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
@@ -40,7 +42,7 @@ class CustomDelete extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.all(8),
-                      // decoration: boxDecoration(color: Colors.blueAccent, radius: 8, bgColor: appStore.isDarkModeOn ? appStore.cardColor : appBarBackgroundColor),
+                      decoration: boxDecoration(color: Colors.blueAccent, radius: 8, bgColor:  cardColor ),
                       child: Center(
                         child: RichText(
                           text: TextSpan(
@@ -59,7 +61,7 @@ class CustomDelete extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.all(8),
-                      // decoration: boxDecoration(bgColor: Colors.blueAccent, radius: 8),
+                      decoration: boxDecoration(bgColor: Colors.blueAccent, radius: 8),
                       child: Center(
                         child: RichText(
                           text: TextSpan(
@@ -84,4 +86,12 @@ class CustomDelete extends StatelessWidget {
       ),
     );
   }
+}
+BoxDecoration boxDecoration({double radius = 2, Color color = Colors.transparent, Color bgColor, var showShadow = false}) {
+  return BoxDecoration(
+    color: bgColor ?? appBarBackgroundColor,
+    boxShadow: showShadow ? defaultBoxShadow(shadowColor: shadowColorGlobal) : [BoxShadow(color: Colors.transparent)],
+    border: Border.all(color: color),
+    borderRadius: BorderRadius.all(Radius.circular(radius)),
+  );
 }
