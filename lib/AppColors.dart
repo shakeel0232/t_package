@@ -10,7 +10,7 @@ const scaffoldSecondaryDark = Color(0xFF1E1E1E);
 const iconColorPrimary = Color(0xFFFFFFFF);
 const appTextColorSecondary = Color(0xFF5A5C5E);
 const iconColorSecondary = Color(0xFFA8ABAD);
-
+const boxShadowFadedGrey = Color(0x11000000);
 //Dark theme color
 const appBackgroundColorDark = Color(0xFF131d25);
 const cardBackgroundBlackDark = Color(0xFF1D2939);

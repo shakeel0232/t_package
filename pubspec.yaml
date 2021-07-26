@@ -16,6 +16,16 @@ dependencies:
   fluttertoast: ^7.1.8
   percent_indicator: ^2.1.9+1
   nb_utils: ^3.3.0+13
+  http: ^0.12.2
+  flutter_spinkit: ^4.1.2+1 # used for loading purpose
+  after_layout: ^1.0.7+2 # for not calling again and again i.e API
+  sliding_up_panel: ^1.0.2
+  timeline_tile: ^1.0.0 # A package to help build customisable timelines in Flutter.
+  animated_drawer: 0.0.4
+  google_fonts: ^0.4.0
+
+
+
 
 dev_dependencies:
   flutter_test:
