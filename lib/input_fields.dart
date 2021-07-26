@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nb_utils/nb_utils.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final Widget icon;
@@ -55,10 +56,11 @@ class CustomTextFormField extends StatelessWidget {
             child: TextFormField(
               textCapitalization: TextCapitalization.sentences,
               controller: this.controller,
-              style: GoogleFonts.lato(
+              style: primaryTextStyle(),
+/*              style: GoogleFonts.lato(
                   color: Colors.black,
                   fontSize: 16.0,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold),*/
 //              style: TextStyle(color: Colors.white),
               keyboardType: this.textInputType,
               maxLength: this.maxLength,
